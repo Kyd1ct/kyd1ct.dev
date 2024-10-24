@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CTF section of the blog. on Kyd1ct</title>
+    <link>http://localhost:1313/blog/ctf/</link>
+    <description>Recent content in CTF section of the blog. on Kyd1ct</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>mgeorgiev5600@gmail.com (Kyd1ct)</managingEditor>
+    <webMaster>mgeorgiev5600@gmail.com (Kyd1ct)</webMaster>
+    <copyright>&amp;copy; 2024 Martin Georgiev. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/blog/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BSides STPete24 CTF Challenge Creation</title>
+      <link>http://localhost:1313/blog/ctf/stpete24-ctf/</link>
+      <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
+      <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
+      <guid>http://localhost:1313/blog/ctf/stpete24-ctf/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
