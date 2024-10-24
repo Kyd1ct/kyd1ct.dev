@@ -1,5 +1,6 @@
 ---
-description: I am a cybersecurity specialist, primarily specialising in malware analysis, digital forensics, and incident response. I will cover these and various CTF/Pentesting challenges (walkthrough and creation) on this website. There are also links to my LinkedIn, Github, and TryHackMe profiles.
+title: kyd1ct.dev
+description: A blog for DFIR, Malware Analysis, and anything in-between! 
 ---
 
 Welcome to my website! I will use this website as a blog to document my research and analysis into various malware samples and how they affect systems. The papers I will include in the blog pages will contain thorough analysis of the samples and a forensic investigation into the effects it has on the affected machines.
