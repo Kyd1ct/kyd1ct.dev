@@ -1,5 +1,5 @@
 ---
-title: CTF section of the blog.
+title: CTFs
 draft: false
 author: Kyd1ct
 description: Welcome to the CTF section!

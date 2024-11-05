@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kyd1ct</title>
+    <title>kyd1ct.dev on Kyd1ct</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Kyd1ct</description>
+    <description>Recent content in kyd1ct.dev on Kyd1ct</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>mgeorgiev5600@gmail.com (Kyd1ct)</managingEditor>
@@ -21,13 +21,13 @@
     </item>
     
     <item>
-      <title>StasVaders Discord Malware Analysis</title>
+      <title>StarsVaders or Spyware? A Discord Malware Disguised as a Game</title>
       <link>http://localhost:1313/blog/malware/starsvaders-discord-malware/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
       <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
       <guid>http://localhost:1313/blog/malware/starsvaders-discord-malware/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/malware/starsvaders-discord-malware/feature_thmb.jpg" />
     </item>
     
   </channel>

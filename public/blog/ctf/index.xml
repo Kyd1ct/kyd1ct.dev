@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CTF section of the blog. on Kyd1ct</title>
+    <title>CTFs on Kyd1ct</title>
     <link>http://localhost:1313/blog/ctf/</link>
-    <description>Recent content in CTF section of the blog. on Kyd1ct</description>
+    <description>Recent content in CTFs on Kyd1ct</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>mgeorgiev5600@gmail.com (Kyd1ct)</managingEditor>
