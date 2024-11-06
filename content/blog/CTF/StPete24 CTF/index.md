@@ -28,7 +28,7 @@ After the flag halves were done, I booted my VM and created multiple files - Not
 
 After this part was done, I grabbed the key used during the encryption, split it in half again, and added two separate environmental variables.  
 
-The second half of the flag was located within a PasteBin link and the participants had to extract it from a chrome process dump. I opened multiple links to make it trickier for the participants if they did not consider looking for PasteBin.
+The second half of the flag was located within a PasteBin link and the participants had to extract it from a Google Chrome process dump. I opened multiple links to make it trickier for the participants if they did not consider looking for PasteBin.
 
 Once the AES key and both halves of the flag were identified, the participants could use [CyberChef](https://gchq.github.io/CyberChef/) to decrypt it and win the challenge.
 
