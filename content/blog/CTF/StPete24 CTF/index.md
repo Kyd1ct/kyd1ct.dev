@@ -7,7 +7,7 @@ description: How I created two steganography and memory forensics challenges for
 ---
 
 ## Introduction
-Back in September 2024, BSides St. Petersburg took place. A friend of mine hosted the CTF and asked me if I wanted to participate by creating a few challenges. I ended up creating two CTF forensics-based challenges.
+Back in September 2024, BSides St. Petersburg took place. A friend of mine hosted the CTF and asked me if I wanted to participate by creating a few challenges. I ended up creating two forensics-based CTF challenges.
 
 1. Cache Me If You Can
     - This challenge highlights the complexity of Windows RAM data and teaches participants how much information can be extracted using memory forensics. By working through this task, players will dive into tools like Volatility to uncover hidden data within volatile memory.
