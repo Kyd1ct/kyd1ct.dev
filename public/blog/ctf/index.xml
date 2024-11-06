@@ -17,7 +17,7 @@
       <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
       <guid>http://localhost:1313/blog/ctf/stpete24-ctf/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg" />
     </item>
     
   </channel>

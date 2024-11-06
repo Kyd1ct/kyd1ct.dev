@@ -11,17 +11,17 @@
     <copyright>&amp;copy; 2024 Martin Georgiev. All Rights Reserved.</copyright>
     <lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>BSides STPete24 CTF Challenge Creation</title>
+      <title>BSides STPete24</title>
       <link>http://localhost:1313/blog/ctf/stpete24-ctf/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
       <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
       <guid>http://localhost:1313/blog/ctf/stpete24-ctf/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg" />
     </item>
     
     <item>
-      <title>StarsVaders or Spyware? A Discord Malware Disguised as a Game</title>
+      <title>StarsVaders or Spyware?</title>
       <link>http://localhost:1313/blog/malware/starsvaders-discord-malware/</link>
       <pubDate>Thu, 24 Oct 2024 00:00:00 +0000</pubDate>
       <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>

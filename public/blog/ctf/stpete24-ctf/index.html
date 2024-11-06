@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>BSides STPete24 CTF Challenge Creation &middot; Kyd1ct</title>
-  <meta name="title" content="BSides STPete24 CTF Challenge Creation &middot; Kyd1ct" />
+  <title>BSides STPete24 &middot; Kyd1ct</title>
+  <meta name="title" content="BSides STPete24 &middot; Kyd1ct" />
   
   <meta name="description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF" />
   
@@ -67,17 +67,19 @@
   
   <meta property="og:url" content="http://localhost:1313/blog/ctf/stpete24-ctf/">
   <meta property="og:site_name" content="Kyd1ct">
-  <meta property="og:title" content="BSides STPete24 CTF Challenge Creation">
+  <meta property="og:title" content="BSides STPete24">
   <meta property="og:description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
     <meta property="article:published_time" content="2024-10-24T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-10-24T00:00:00+00:00">
+    <meta property="og:image" content="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="BSides STPete24 CTF Challenge Creation">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg">
+  <meta name="twitter:title" content="BSides STPete24">
   <meta name="twitter:description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF">
 
   
@@ -86,8 +88,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "BSides STPete24 CTF Challenge Creation",
-    "headline": "BSides STPete24 CTF Challenge Creation",
+    "name": "BSides STPete24",
+    "headline": "BSides STPete24",
     "description": "How I created two steganography and memory forensics challenges for the BSides StPete CTF",
     
     "inLanguage": "en",
@@ -105,7 +107,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "5"
+    "wordCount": "608"
   }]
   </script>
 
@@ -632,30 +634,11 @@
 
 <article>
   
-  
-  
-  
-  
-  
-
-<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
-<script>
-    window.addEventListener('scroll', function (e) {
-        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-        var background_blur = document.getElementById('background-blur');
-        background_blur.style.opacity = (scroll / 300)
-    });
-</script>
-
-
-
-  
-  
 
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      BSides STPete24 CTF Challenge Creation
+      BSides STPete24
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -700,7 +683,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-24T00:00:00&#43;00:00">24 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span>5 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2024-10-24T00:00:00&#43;00:00">24 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span>608 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
@@ -730,7 +713,83 @@
   
   <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
     
-    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#challenges">Challenges</a>
+      <ul>
+        <li><a href="#cache-me-if-you-can">Cache Me If You Can</a></li>
+        <li><a href="#gregs-cryptic-thumbs-up">Greg&rsquo;s Cryptic Thumbs-Up</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#challenges">Challenges</a>
+      <ul>
+        <li><a href="#cache-me-if-you-can">Cache Me If You Can</a></li>
+        <li><a href="#gregs-cryptic-thumbs-up">Greg&rsquo;s Cryptic Thumbs-Up</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+</script>
+   </div>
+      </div>
+      
 
       <div class="min-w-0 min-h-0 max-w-fit">
         
@@ -738,7 +797,91 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>BSides STPete24 CTF Challenge Creation</p>
+          
+
+<h2 class="relative group">Introduction 
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#introduction" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Back in September 2024, BSides St. Petersburg took place. A friend of mine hosted the CTF and asked me if I wanted to participate by creating a few challenges. I ended up creating two CTF challenges, both focusing on defensive tactics.</p>
+<ol>
+<li>Cache Me If You Can
+<ul>
+<li>This challenge highlights the complexity of Windows RAM data and teaches participants how much information can be extracted using memory forensics. By working through this task, players will dive into tools like Volatility to uncover hidden data within volatile memory.</li>
+</ul>
+</li>
+<li>Greg&rsquo;s Cryptic Thumbs-Up
+<ul>
+<li>A multi-layered steganography challenge where players must find a hidden link within a GIF, which leads to a PDF file containing another concealed message. This exercise pushes participants to think outside the box and explore different techniques for uncovering hidden information within files.</li>
+</ul>
+</li>
+</ol>
+
+
+<h2 class="relative group">Challenges 
+    <div id="challenges" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#challenges" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">Cache Me If You Can 
+    <div id="cache-me-if-you-can" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#cache-me-if-you-can" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>As mentioned, this challenge focused on RAM forensics and aimed to teach the participants about how valuable volatile data can be for an investigation. I decided to focus on the following:</p>
+<ul>
+<li>Split the flag in two halves and hide them in separate places.</li>
+<li>Encourage creativity - I used a variety of file names and tools to insert the data in memory.</li>
+<li>Environmental variables.</li>
+<li>Web browser history.</li>
+<li>Encryption of the flag.</li>
+</ul>
+<p>I started by creating a long flag. I first encoded it in Base64, then encrypted it using AES. The result was split in two halves.<br>
+After the flag halves were done, I booted my VM and created multiple files - Notepad, Notepad++, vim. I opened them together with some other files in an attempt to trick the users. One of the files was named with the first half of the flag, while the other two contained either hints, or added as a deception.</p>
+<p>After this part was done, I grabbed the key used during the encryption, split it in half again, and added two separate environmental variables.</p>
+<p>The second half of the flag was located within a PasteBin link and the participants had to extract it from a chrome process dump. I opened multiple links to make it trickier for the participants if they did not consider looking for PasteBin.</p>
+<p>Once the AES key and both halves of the flag were identified, the participants could use <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> to decrypt it and win the challenge.</p>
+<p>The challenge can be accessed in my <a href="https://github.com/Kyd1ct/BSides-StPete-2024/tree/main/Cache%20Me%20If%20You%20Can" target="_blank">GitHub</a> page, together with a full walkthrough.</p>
+
+
+<h3 class="relative group">Greg&rsquo;s Cryptic Thumbs-Up 
+    <div id="gregs-cryptic-thumbs-up" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#gregs-cryptic-thumbs-up" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>This challenge featured multi-layer steganography, attempting to challenge and trick the users. I decided to focus on the following:</p>
+<ul>
+<li>Hide data within a GIF.</li>
+<li>GIF leads to a PDF with a hidden message - maybe it was &ldquo;printed&rdquo;?</li>
+<li>Decode the hidden message by hand or by using a toolkit.</li>
+</ul>
+<p>The idea of this challenge was to be simple, yet pose a challenge to users who have not previously dealt with printer dots.</p>
+<p>As mentioned, the first part of the challenge was hidden data within a GIF. I split the GIF into frames and edited parts of a link (split into 4 parts) into those frames. The colour of the text was purposefully made to blend into the background. This to examine it frame by frame to obtain the link.</p>
+<p>The link lead to a PDF file with a hidden message. Once the participants zoomed in, they could see the tiny dots that printers usually include. The dots were placed on the PDF using the <a href="https://github.com/dfd-tud/deda" target="_blank">Deda Toolkit</a>. Participants could use the same toolkit to decode the data, or they could do it by hand if they had enough experience.</p>
+<p>Once again, the challenge can be accessed in my <a href="https://github.com/Kyd1ct/BSides-StPete-2024/tree/main/Greg%27s%20Cryptic%20Thumbs-Up" target="_blank">GitHub</a> page together with a full walkthrough.</p>
 
           
           
@@ -855,7 +998,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;title=BSides%20STPete24%20CTF%20Challenge%20Creation"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;title=BSides%20STPete24"
       title="Share on LinkedIn"
       aria-label="Share on LinkedIn"
       >
@@ -874,7 +1017,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;text=BSides%20STPete24%20CTF%20Challenge%20Creation"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;text=BSides%20STPete24"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
       >
@@ -892,7 +1035,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://s2f.kytta.dev/?text=BSides%20STPete24%20CTF%20Challenge%20Creation%20http://localhost:1313/blog/ctf/stpete24-ctf/"
+      href="https://s2f.kytta.dev/?text=BSides%20STPete24%20http://localhost:1313/blog/ctf/stpete24-ctf/"
       title=""
       aria-label=""
       >
@@ -911,7 +1054,7 @@
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;resubmit=true&amp;title=BSides%20STPete24%20CTF%20Challenge%20Creation"
+      href="https://reddit.com/submit/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;resubmit=true&amp;title=BSides%20STPete24"
       title="Submit to Reddit"
       aria-label="Submit to Reddit"
       >
