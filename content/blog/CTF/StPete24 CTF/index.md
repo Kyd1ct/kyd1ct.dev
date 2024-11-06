@@ -45,6 +45,6 @@ The idea of this challenge was to be simple, yet pose a challenge to users who h
 As mentioned, the first part of the challenge was hidden data within a GIF. I split the GIF into frames and edited parts of a link (split into 4 parts) into those frames. The colour of the text was purposefully made to blend into the background. This to examine it frame by frame to obtain the link. 
 
 The link lead to a PDF file with a hidden message. Once the participants zoomed in, they could see the tiny dots that printers usually include. The dots were placed on the PDF using the [Deda Toolkit](https://github.com/dfd-tud/deda). Participants could use the same toolkit to decode the data, or they could do it by hand if they had enough experience.
-The message hiddin in the dots contained the flag which consisted of date, time, and a serial number - information which is included by printers on each sheet of paper. 
+The message hiddin in the dots contained the flag which consisted of date, time, and a serial number - information which is [included](https://w2.eff.org/Privacy/printers/docucolor/) by printers on each sheet of paper. 
 
 Once again, the challenge can be accessed in my [GitHub](https://github.com/Kyd1ct/BSides-StPete-2024/tree/main/Greg's%20Cryptic%20Thumbs-Up) page together with a full walkthrough.
