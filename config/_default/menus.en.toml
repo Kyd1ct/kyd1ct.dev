@@ -40,7 +40,7 @@
   [[main]]
   name = "Miscellaneous"
   parent = "Blog"
-  pageRef = "misc"
+  pageRef = "miscellaneous"
   weight = 2
 
 [[main]]
