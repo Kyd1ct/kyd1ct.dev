@@ -8,16 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>BSides STPete24 &middot; Kyd1ct</title>
-  <meta name="title" content="BSides STPete24 &middot; Kyd1ct" />
+  <title>IP Block Automation &middot; Kyd1ct</title>
+  <meta name="title" content="IP Block Automation &middot; Kyd1ct" />
   
-  <meta name="description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF" />
+  <meta name="description" content="How two simple PowerShell scripts significantly reduced the workload for me and my colleagues." />
   
   
   <meta name="robots" content="true" />
   
   
-  <link rel="canonical" href="http://localhost:1313/blog/ctf/stpete24-ctf/" />
+  <link rel="canonical" href="http://localhost:1313/blog/miscellaneous/ip-block-automation/" />
   
   
   
@@ -65,22 +65,20 @@
   
   
   
-  <meta property="og:url" content="http://localhost:1313/blog/ctf/stpete24-ctf/">
+  <meta property="og:url" content="http://localhost:1313/blog/miscellaneous/ip-block-automation/">
   <meta property="og:site_name" content="Kyd1ct">
-  <meta property="og:title" content="BSides STPete24">
-  <meta property="og:description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF">
+  <meta property="og:title" content="IP Block Automation">
+  <meta property="og:description" content="How two simple PowerShell scripts significantly reduced the workload for me and my colleagues.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-10-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-10-24T00:00:00+00:00">
-    <meta property="og:image" content="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg">
+    <meta property="article:published_time" content="2025-04-18T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-18T00:00:00+00:00">
 
   
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/blog/ctf/stpete24-ctf/feature_thmb.jpg">
-  <meta name="twitter:title" content="BSides STPete24">
-  <meta name="twitter:description" content="How I created two steganography and memory forensics challenges for the BSides StPete CTF">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="IP Block Automation">
+  <meta name="twitter:description" content="How two simple PowerShell scripts significantly reduced the workload for me and my colleagues.">
 
   
   <script type="application/ld+json">
@@ -88,26 +86,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blog",
-    "name": "BSides STPete24",
-    "headline": "BSides STPete24",
-    "description": "How I created two steganography and memory forensics challenges for the BSides StPete CTF",
+    "name": "IP Block Automation",
+    "headline": "IP Block Automation",
+    "description": "How two simple PowerShell scripts significantly reduced the workload for me and my colleagues.",
     
     "inLanguage": "en",
-    "url" : "http:\/\/localhost:1313\/blog\/ctf\/stpete24-ctf\/",
+    "url" : "http:\/\/localhost:1313\/blog\/miscellaneous\/ip-block-automation\/",
     "author" : {
       "@type": "Person",
       "name": "Kyd1ct"
     },
-    "copyrightYear": "2024",
-    "dateCreated": "2024-10-24T00:00:00\u002b00:00",
-    "datePublished": "2024-10-24T00:00:00\u002b00:00",
+    "copyrightYear": "2025",
+    "dateCreated": "2025-04-18T00:00:00\u002b00:00",
+    "datePublished": "2025-04-18T00:00:00\u002b00:00",
     
-    "dateModified": "2024-10-24T00:00:00\u002b00:00",
+    "dateModified": "2025-04-18T00:00:00\u002b00:00",
     
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "635"
+    "wordCount": "523"
   }]
   </script>
 
@@ -654,7 +652,7 @@
   <header id="single_header" class="mt-5 max-w-prose">
     
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-      BSides STPete24
+      IP Block Automation
     </h1>
     <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
       
@@ -699,7 +697,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-10-24T00:00:00&#43;00:00">24 October 2024</time><span class="px-2 text-primary-500">&middot;</span><span>635 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+  <time datetime="2025-04-18T00:00:00&#43;00:00">18 April 2025</time><span class="px-2 text-primary-500">&middot;</span><span>523 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
@@ -744,10 +742,10 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#challenges">Challenges</a>
+    <li><a href="#scripts">Scripts</a>
       <ul>
-        <li><a href="#cache-me-if-you-can">Cache Me If You Can</a></li>
-        <li><a href="#gregs-cryptic-thumbs-up">Greg&rsquo;s Cryptic Thumbs-Up</a></li>
+        <li><a href="#abuseipdb-checker">AbuseIPDB Checker</a></li>
+        <li><a href="#blocklist-checker">Blocklist Checker</a></li>
       </ul>
     </li>
   </ul>
@@ -764,10 +762,10 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#challenges">Challenges</a>
+    <li><a href="#scripts">Scripts</a>
       <ul>
-        <li><a href="#cache-me-if-you-can">Cache Me If You Can</a></li>
-        <li><a href="#gregs-cryptic-thumbs-up">Greg&rsquo;s Cryptic Thumbs-Up</a></li>
+        <li><a href="#abuseipdb-checker">AbuseIPDB Checker</a></li>
+        <li><a href="#blocklist-checker">Blocklist Checker</a></li>
       </ul>
     </li>
   </ul>
@@ -825,80 +823,152 @@
     </span>        
     
 </h2>
-<p>Back in September 2024, BSides St. Petersburg took place. A friend of mine hosted the CTF and asked me if I wanted to participate by creating a few challenges. I ended up creating two forensics-based CTF challenges.</p>
-<ol>
-<li>Cache Me If You Can
-<ul>
-<li>This challenge highlights the complexity of Windows RAM data and teaches participants how much information can be extracted using memory forensics. By working through this task, players will dive into tools like Volatility to uncover hidden data within volatile memory.</li>
-</ul>
-</li>
-<li>Greg&rsquo;s Cryptic Thumbs-Up
-<ul>
-<li>A multi-layered steganography challenge where players must find a hidden link within a GIF, which leads to a PDF file containing another concealed message. This exercise pushes participants to think outside the box and explore different techniques for uncovering hidden information within files.</li>
-</ul>
-</li>
-</ol>
+<p>Brute-force alerts were a hefty task for me when I first started my job as a SOC Analyst. At the time, the triage process was entirely manual, which made it rather resource-intensive and time-consuming. In my eyes this approach was not an efficient use of time, so I took the initiative to automate it.
+I created two separate scripts - one took the generated log and used AbuseIPDB&rsquo;s API to scan the IP addresses, while the other checked if they were already blocked within our environment.</p>
 
 
-<h2 class="relative group">Challenges 
-    <div id="challenges" class="anchor"></div>
+<h2 class="relative group">Scripts 
+    <div id="scripts" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#challenges" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#scripts" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 
 
-<h3 class="relative group">Cache Me If You Can 
-    <div id="cache-me-if-you-can" class="anchor"></div>
+<h3 class="relative group">AbuseIPDB Checker 
+    <div id="abuseipdb-checker" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#cache-me-if-you-can" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#abuseipdb-checker" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>As mentioned, this challenge focused on RAM forensics and aimed to teach the participants about how valuable volatile data can be for an investigation. I decided to focus on the following:</p>
-<ul>
-<li>Split the flag in two halves and hide them in separate places.</li>
-<li>Encourage creativity - I used a variety of file names and tools to insert the data in memory.</li>
-<li>Environmental variables.</li>
-<li>Web browser history.</li>
-<li>Encryption of the flag.</li>
-</ul>
-<p>I started by creating a long flag. I first encoded it in Base64, then encrypted it using AES. The result was split in two halves.<br>
-After the flag halves were done, I booted my VM and created multiple files - Notepad, Notepad++, vim. I opened them together with some other files in an attempt to trick the users. One of the files was named with the first half of the flag, while the other two contained either hints, or added as a deception.</p>
-<p>After this part was done, I grabbed the key used during the encryption, split it in half again, and added two separate environmental variables.</p>
-<p>The second half of the flag was located within a PasteBin link and the participants had to extract it from a Google Chrome process dump. I opened multiple links to make it trickier for the participants if they did not consider looking for PasteBin.</p>
-<p>Once the AES key and both halves of the flag were identified, the participants could use <a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a> to decrypt it and win the challenge.</p>
-<p>The challenge can be accessed in my <a href="https://github.com/Kyd1ct/BSides-StPete-2024/tree/main/Cache%20Me%20If%20You%20Can" target="_blank">GitHub</a> page, together with a full walkthrough.</p>
+<p>The first script is used to automatically grab IP addresses from the log and check them using the <strong>AbuseIPDB</strong> API. The script takes a <strong>CSV</strong> file with the logs and filters all of the data to extract only valid IP addresses using <strong>RegEx</strong>. The script also sorts through duplicates and returns only unique entries.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># Function to validate IP addresses</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Validate-IP</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">param</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">[</span><span class="no">string</span><span class="p">]</span><span class="nv">$IP</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># Regular expression for validating an IP address (IPv4)</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$regex</span> <span class="p">=</span> <span class="s1">&#39;^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$IP</span> <span class="o">-match</span> <span class="nv">$regex</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c"># Read the CSV file</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$csvData</span> <span class="p">=</span> <span class="nb">Import-Csv</span> <span class="n">-Path</span> <span class="nv">$inputFile</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="c"># Extract valid IPs from the CSV</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$ipAddresses</span> <span class="p">=</span> <span class="nv">$csvData</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_</span><span class="p">.</span><span class="py">PSObject</span><span class="p">.</span><span class="py">Properties</span><span class="p">.</span><span class="py">Value</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$ip</span> <span class="p">=</span> <span class="nv">$_</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nb">Validate-IP</span> <span class="n">-IP</span> <span class="nv">$ip</span> <span class="o">-and</span> <span class="nv">$ip</span> <span class="o">-notmatch</span> <span class="s1">&#39;^\d+$&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nv">$ip</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Unique</span>
+</span></span></code></pre></div><p>The user also has to provide an output file which defaults to <strong>XLSX</strong> format. They also have an option to provide Abuse score threshold (<strong>-t</strong>), minimum days of retained reports (<strong>-md</strong>), or display the user manual (<strong>-help</strong>) if required.</p>
+
+  
+  
+  
+  
 
 
-<h3 class="relative group">Greg&rsquo;s Cryptic Thumbs-Up 
-    <div id="gregs-cryptic-thumbs-up" class="anchor"></div>
+
+<div
+  
+    class="flex px-4 py-3 rounded-md"
+    style="background-color: #5D3FD3"
+  >
+
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center"
+      style="color: #21286b"
+    >
+
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #f1faee"
+    >Note: The default threshold is set to <strong>20%</strong> and the timeline of the fetched reports is <strong>30 days</strong>.</span>
+</div>
+
+<p>The script utilises the API to obtain the <strong>IP Address</strong>, <strong>Confidence Score</strong>, <strong>ISP</strong>, <strong>Usage Type</strong>, <strong>Location</strong>, <strong>Total Reports</strong>, and potential <strong>Tor Node</strong> identification. The script shows appropriate errors to help with troubleshooting if any issues occur.</p>
+<p>Finally, it exports the results to Excel and has the functionality to overwrite files with the same name. If no IPs with Abuse Score over the threshold was found, an Excel sheet is not generated and the script displays a message.</p>
+<p>The full script can be found on my <a href="https://github.com/Kyd1ct/Automation_Scripts/blob/main/Powershell/abuseipdb_check.ps1" target="_blank">GitHub Page</a>.</p>
+
+
+<h3 class="relative group">Blocklist Checker 
+    <div id="blocklist-checker" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#gregs-cryptic-thumbs-up" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#blocklist-checker" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
-<p>This challenge featured multi-layer steganography, attempting to challenge and trick the users. I decided to focus on the following:</p>
+<p>The second script is made specifically for a blocklist accessible through a URL but it can be altered to suit the user&rsquo;s needs. The user has the following options:</p>
 <ul>
-<li>Hide data within a GIF.</li>
-<li>GIF leads to a PDF with a hidden message - maybe it was &ldquo;printed&rdquo;?</li>
-<li>Decode the hidden message by hand or by using a toolkit.</li>
+<li><strong>-i</strong>: Input file</li>
+<li><strong>-o</strong>: Output file (optional, otherwise results will be displayed in the command line)</li>
+<li><strong>-e</strong>: Specify if it should expect an Excel sheet. No flag is needed if the IPs are in a .txt file.</li>
+<li><strong>-r</strong>: Displays unique IPs with semi-colon as a delimiter.</li>
 </ul>
-<p>The idea of this challenge was to be simple, yet pose a challenge to users who have not previously dealt with printer dots.</p>
-<p>As mentioned, the first part of the challenge was hidden data within a GIF. I split the GIF into frames and edited parts of a link (split into 4 parts) into those frames. The colour of the text was purposefully made to blend into the background. This to examine it frame by frame to obtain the link.</p>
-<p>The link lead to a PDF file with a hidden message. Once the participants zoomed in, they could see the tiny dots that printers usually include. The dots were placed on the PDF using the <a href="https://github.com/dfd-tud/deda" target="_blank">Deda Toolkit</a>. Participants could use the same toolkit to decode the data, or they could do it by hand if they had enough experience.
-The message hiddin in the dots contained the flag which consisted of date, time, and a serial number - information which is <a href="https://w2.eff.org/Privacy/printers/docucolor/" target="_blank">included</a> by printers on each sheet of paper.</p>
-<p>Once again, the challenge can be accessed in my <a href="https://github.com/Kyd1ct/BSides-StPete-2024/tree/main/Greg%27s%20Cryptic%20Thumbs-Up" target="_blank">GitHub</a> page together with a full walkthrough.</p>
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md"
+    style="background-color: #5D3FD3"
+  >
+
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center"
+      style="color: #21286b"
+    >
+
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #f1faee"
+    >Note: The -e flag is made to work with Excel sheets created by the former script. Some changes to the script will be necessary if your Excel sheets have a different layout.</span>
+</div>
+
+<p>The functionality is simple - it iterates through all the provided IPs and checks if they are present within the blocklist. Any missing addresses will be provided to the user so they can be promptly blocked.</p>
+<p>The full script can be found on my <a href="https://github.com/Kyd1ct/Automation_Scripts/blob/main/Powershell/blocklist.ps1" target="_blank">GitHub Page</a>.</p>
 
           
           
@@ -1015,7 +1085,7 @@ The message hiddin in the dots contained the flag which consisted of date, time,
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;title=BSides%20STPete24"
+      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/blog/miscellaneous/ip-block-automation/&amp;title=IP%20Block%20Automation"
       title="Share on LinkedIn"
       aria-label="Share on LinkedIn"
       >
@@ -1034,7 +1104,7 @@ The message hiddin in the dots contained the flag which consisted of date, time,
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;text=BSides%20STPete24"
+      href="https://twitter.com/intent/tweet/?url=http://localhost:1313/blog/miscellaneous/ip-block-automation/&amp;text=IP%20Block%20Automation"
       title="Tweet on Twitter"
       aria-label="Tweet on Twitter"
       >
@@ -1052,7 +1122,7 @@ The message hiddin in the dots contained the flag which consisted of date, time,
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://s2f.kytta.dev/?text=BSides%20STPete24%20http://localhost:1313/blog/ctf/stpete24-ctf/"
+      href="https://s2f.kytta.dev/?text=IP%20Block%20Automation%20http://localhost:1313/blog/miscellaneous/ip-block-automation/"
       title=""
       aria-label=""
       >
@@ -1071,7 +1141,7 @@ The message hiddin in the dots contained the flag which consisted of date, time,
       <a
       target="_blank"
       class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-      href="https://reddit.com/submit/?url=http://localhost:1313/blog/ctf/stpete24-ctf/&amp;resubmit=true&amp;title=BSides%20STPete24"
+      href="https://reddit.com/submit/?url=http://localhost:1313/blog/miscellaneous/ip-block-automation/&amp;resubmit=true&amp;title=IP%20Block%20Automation"
       title="Submit to Reddit"
       aria-label="Submit to Reddit"
       >
@@ -1100,8 +1170,8 @@ The message hiddin in the dots contained the flag which consisted of date, time,
           
         
       <script>
-        var oid = "views_blog\\CTF\\StPete24 CTF\\index.md"
-        var oid_likes = "likes_blog\\CTF\\StPete24 CTF\\index.md"
+        var oid = "views_blog\\Miscellaneous\\IP Block Automation\\index.md"
+        var oid_likes = "likes_blog\\Miscellaneous\\IP Block Automation\\index.md"
       </script>
       
       

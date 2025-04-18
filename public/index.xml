@@ -9,7 +9,17 @@
     <managingEditor>mgeorgiev5600@gmail.com (Kyd1ct)</managingEditor>
     <webMaster>mgeorgiev5600@gmail.com (Kyd1ct)</webMaster>
     <copyright>&amp;copy; 2024 Martin Georgiev. All Rights Reserved.</copyright>
-    <lastBuildDate>Thu, 24 Oct 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IP Block Automation</title>
+      <link>http://localhost:1313/blog/miscellaneous/ip-block-automation/</link>
+      <pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate>
+      <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
+      <guid>http://localhost:1313/blog/miscellaneous/ip-block-automation/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>BSides STPete24</title>
       <link>http://localhost:1313/blog/ctf/stpete24-ctf/</link>
