@@ -37,6 +37,12 @@
   pageRef = "ctf"
   weight = 2
 
+  [[main]]
+  name = "Miscellaneous"
+  parent = "Blog"
+  pageRef = "misc"
+  weight = 2
+
 [[main]]
   identifier = "linkedin"
   pre = "linkedin"
