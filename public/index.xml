@@ -9,7 +9,17 @@
     <managingEditor>mgeorgiev5600@gmail.com (Kyd1ct)</managingEditor>
     <webMaster>mgeorgiev5600@gmail.com (Kyd1ct)</webMaster>
     <copyright>&amp;copy; 2025 Martin Georgiev. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CAPTCHA This!</title>
+      <link>http://localhost:1313/blog/malware/captcha_this/</link>
+      <pubDate>Wed, 14 May 2025 00:00:00 +0000</pubDate>
+      <author>mgeorgiev5600@gmail.com (Kyd1ct)</author>
+      <guid>http://localhost:1313/blog/malware/captcha_this/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/blog/malware/captcha_this/feature_thmb.jpg" />
+    </item>
+    
     <item>
       <title>XWorm</title>
       <link>http://localhost:1313/blog/malware/xworm/</link>
